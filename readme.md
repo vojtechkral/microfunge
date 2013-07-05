@@ -11,5 +11,5 @@ Even though it's so minimalist, it should be fairly standard-compliant.
 
 MicroFunge requires a fairly recent C++ compiler - some C++11 features are used.
 
-I am not certain the code comiles well and all platforms, there may be a structure
+I am not certain the code compiles well and all platforms, there may be a structure
 padding problem.
