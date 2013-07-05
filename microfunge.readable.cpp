@@ -5,11 +5,11 @@
 #include <cstring>
 #include <ctime>
 
-typedef long int i;
+typedef long i;
 
 using namespace std;
 
-i x, y=0, a=1, b=0, t=0, u=0, m=0;
+i x, y, a=1, b, t, u, m;
 const i w=80, h=25;
 stack<i> s;
 
@@ -81,15 +81,11 @@ struct Op_All
 	SOp_Bad y[5];  // 117
 	SOp z[9] = { {op_down}, {op_bad}, {op_bad}, {op_bad}, {op_bad}, {op_bad}, {op_if_vert}, {op_bad}, {op_in_c} };  // 126
 	SOp_Bad m[129];  // 255
-
-	Op operator [] (i x)
-	{
-		return ((SOp*)this)[x].op;
-	}
 } op_all;
 
 int main(int, char**d)
 {
+	y=b=t=u=m=0;
 	srand(time(0));
 	memset(z, 32, w*h);
 
@@ -98,12 +94,11 @@ int main(int, char**d)
 
 	for(;(x = f.get(), f.good() && t < h);)
 	{
-		if (x == '\n')
+		if (x == '\n' || (x == '\r' && f.peek() != '\n'))
 		{
-			t++;
-			u = 0;
+			t++; u = 0;
 		}
-		else
+		else if (x != '\r')
 		{
 			if (u < w) z[t][u++] = x;
 		}
@@ -114,15 +109,15 @@ int main(int, char**d)
 	x=0;
 	for(;;)
 	{
-		i j = z[y][x];
+		i c = z[y][x];
 
 		if (m)
 		{
-			if (j != 34) p(j);
+			if (c != 34) p(c);
 			else m = 0;
 		} else
 		{
-			(*op_all[j])();
+			((SOp*)&op_all)[c].op();
 		}
 
 		op_trampoline();
