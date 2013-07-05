@@ -7,7 +7,7 @@ I wrote it just for fun, to see if I could stuff a BeFunge interpreter in a 25x8
 
 While being a C++ source, the microfunge.cpp file is also a fully working BeFunge-93 quine program.
 
-Even though it's so minimalist, it should be reasonablyfast and standard-compliant.
+Even though it's minimalist, it should be reasonably fast and standard-compliant.
 
 MicroFunge requires a fairly recent C++ compiler - some C++11 features are used.
 
