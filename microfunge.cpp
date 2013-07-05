@@ -21,5 +21,5 @@ i M(){a=0;b=q()?-1:1;}i N(){b=0;a=q()?-1:1;}i O(){x+=w+a;x%=w;y+=h+b;y%=h;}i P()
 27];j f[5]={{Q},{Y},{J},{N},{L}};k g[6];j h[1]={{T}};k w[8];j x[1]={{S}};k y[5];
 j z[9]={{K},{Y},{Y},{Y},{Y},{Y},{M},{Y},{X}};k m[129];o operator[](i x){return((
 j*)this)[x]._;}}g;int main(int,char**d){srand(time(0));memset(z,32,w*h);fstream
-f(d[1]);f.good()||Z();for(;(x=f.get(),f.good()&&t<h);)x^10?(u<w?z[t][u++]=x:0):(
+f(d[1]);f.good()||Y();for(;(x=f.get(),f.good()&&t<h);)x^10?(u<w?z[t][u++]=x:0):(
 t++,u=0);f.close();x=0;for(;;){i j = z[y][x];m?j^34?p(j):m=0:(*g[j])();O();}}//@

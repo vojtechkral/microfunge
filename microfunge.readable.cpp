@@ -94,7 +94,7 @@ int main(int, char**d)
 	memset(z, 32, w*h);
 
 	fstream f(d[1]);
-	f.good()||op_exit();
+	f.good()||op_bad();
 
 	for(;(x = f.get(), f.good() && t < h);)
 	{
