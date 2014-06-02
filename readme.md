@@ -14,3 +14,9 @@ MicroFunge requires a fairly recent C++ compiler - some C++11 features are used.
 
 I am not certain the code compiles well on all platforms, there may be a structure
 padding problem.
+
+
+Rust version
+===
+
+There is now a Rust version, works pretty much the same except it only accepts LF line endings.
